@@ -1,0 +1,17 @@
+body {
+  font-size: 16px;
+}
+
+.cell {
+  height: 94px;
+  width: 94px;
+  border: 2px solid red;
+  margin: 4px;
+}
+
+.grid-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
