@@ -7,14 +7,18 @@ class Cell extends Component {
     }
 
     handleClick = (e) => {
-        console.log("clicked : " + e.target.textContent);
+        let { selected } = this.state;
+        this.setState({ selected: !selected });
     }
 
     render() {
         const { name } = this.props;
+        const { selected } = this.state;
+        let cssClasses = "cell";
+        cssClasses += selected ? " cell-selected" : "";
 
         return (
-            <div className="cell"
+            <div className={cssClasses}
                 onClick={this.handleClick}>{name}
             </div>
         );

@@ -2,16 +2,24 @@ body {
   font-size: 16px;
 }
 
+.App {
+  width: 80%;
+  margin: auto;
+}
+
 .cell {
-  height: 94px;
-  width: 94px;
+  height: 80px;
+  width: 80px;
   border: 2px solid red;
   margin: 4px;
 }
 
+.cell-selected {
+  border: 2px solid  green;
+  background-color: beige;
+}
+
 .grid-container {
-  width: 80%;
-  margin: auto;
   display: flex;
   flex-wrap: wrap;
 }

@@ -6,8 +6,8 @@ class App extends Component {
     return (
       <div className="App">
         <Grid
-          rows={10}
-          cols={10}
+          rows={100}
+          cols={100}
         />
       </div>
     );
