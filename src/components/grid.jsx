@@ -2,20 +2,28 @@ import React from 'react';
 import Cell from './cell';
 import '../App.css';
 
-const Grid = ({ rows, cols }) => {
-    const r = [...Array(rows).keys()];
-    const c = [...Array(cols).keys()];
+
+function createCells(rows, cols) {
+    let cellData = [];
+    for (let i = 0; i < rows; i++) {
+        cellData.push(<div key={i} className="row-container"></div>)
+        for (let j = 0; j < cols; j++) {
+            cellData.push(
+                <Cell
+                    key={i + "," + j}
+                    name={i + "," + j}
+                />);
+        }
+    }
+
+    return cellData;
+}
+
+const Grid = ({ totalRows, totalCols }) => {
     return (
         <div className="grid-container">
             {
-                r.map((row, i) => (
-                    c.map((col, j) => (
-                        <Cell
-                            key={i + "," + j}
-                            name={i + "," + j}
-                        />
-                    ))
-                ))
+                createCells(totalRows, totalCols)
             }
         </div>
     );

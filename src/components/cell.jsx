@@ -6,6 +6,17 @@ class Cell extends Component {
         selected: false
     }
 
+    componentDidMount = () => {
+        const { reset } = this.props;
+        const { selected } = this.state;
+        console.log(`In component did mount, selected : ${selected}`);
+        // should it be reset ?
+        if (selected && reset) {
+            this.setState({ selected: false });
+
+        }
+    }
+
     handleClick = (e) => {
         let { selected } = this.state;
         this.setState({ selected: !selected });
