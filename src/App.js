@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Grid from './components/grid';
 import InputArea from './components/inputArea';
 
-class App extends Component {
+class App extends PureComponent {
   // initial state
   state = {
-    totalRows: 5,
-    totalCols: 10
+    totalRows: 100,
+    totalCols: 100
   }
 
   handleEnter = (rows, cols) => {
